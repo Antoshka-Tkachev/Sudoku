@@ -61,6 +61,7 @@ public class ControllerGameMode implements Initializable {
         comboLevelOfDifficulty.getItems().add("Любитель");
         comboLevelOfDifficulty.getItems().add("Профи");
         comboLevelOfDifficulty.setOnAction(this::clickedLevelOfDifficulty);
+
         startGUI();
     }
 

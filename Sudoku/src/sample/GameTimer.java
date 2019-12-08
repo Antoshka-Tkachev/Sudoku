@@ -30,7 +30,7 @@ public class GameTimer {
     }
 
     public String outputInfo() {
-        return "Ваше время: " + hours + ":" + minutes + ":" + seconds;
+        return hours + ":" + minutes + ":" + seconds;
     }
 
     public void start() {

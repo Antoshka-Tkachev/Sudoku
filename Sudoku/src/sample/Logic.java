@@ -56,6 +56,11 @@ public class Logic {
         countNumberForSelection[index]++;
     }
 
+    public int getCountNumberForSelectionElement(int number) {
+        int index = number - 1;
+        return countNumberForSelection[index];
+    }
+
     public void removeCountNumberForSelectionElement(int number) {
         int index = number - 1;
         countNumberForSelection[index]--;
@@ -63,7 +68,7 @@ public class Logic {
 
     public boolean checkFullnessNumberForSelection(int number) {
         int index = number - 1;
-        return countNumberForSelection[index] == 9;
+        return countNumberForSelection[index] >= 9;
     }
 
     public int getLives() {
@@ -141,9 +146,6 @@ public class Logic {
         gameFields[row][column] = selectedNumber;
     }
 
-//    public void setGameFieldsElement(int row, int column, int number) {
-//        gameFields[row][column] = number;
-//    }
 
     public boolean checkGameFields(int indexRow, int indexColumn) {
         return gameFields[indexRow][indexColumn] == arrangementNumbers[indexRow][indexColumn];
@@ -181,7 +183,7 @@ public class Logic {
 
     public void createArrangementNumbers() {
         try {
-            BufferedReader reader = new BufferedReader (new FileReader("D:\\Programs\\Sudoku\\src\\sample\\NewFile.txt"));
+            BufferedReader reader = new BufferedReader (new FileReader("D:\\Programs\\Sudoku\\Sudoku\\src\\sample\\NewFile.txt"));
             for (int i = 0; i < 9; i++) {
                 for (int j = 0; j < 9; j++) {
                     arrangementNumbers[i][j] = Integer.parseInt(reader.readLine());
@@ -195,7 +197,7 @@ public class Logic {
 
     public void createArrangementGaps() {
         try {
-            BufferedReader reader = new BufferedReader (new FileReader("D:\\Programs\\Sudoku\\src\\sample\\NewFileBool.txt"));
+            BufferedReader reader = new BufferedReader (new FileReader("D:\\Programs\\Sudoku\\Sudoku\\src\\sample\\NewFileBool.txt"));
             for (int i = 0; i < 9; i++) {
                 for (int j = 0; j < 9; j++) {
                     arrangementGaps[i][j] = Boolean.parseBoolean(reader.readLine());
@@ -206,10 +208,6 @@ public class Logic {
             System.out.println("Error" + e);
         }
     }
-
-//    public Logic(Logic logic) {
-//        this.selectedNumber = logic.selectedNumber;
-//    }
 
     public int getSelectedNumber() {
         return selectedNumber;
