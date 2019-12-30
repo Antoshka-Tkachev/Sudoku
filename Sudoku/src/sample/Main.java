@@ -27,6 +27,8 @@ public class Main extends Application {
 //        FXMLLoader loader = new FXMLLoader(getClass().getResource("modeSurvival.fxml"));
 //        loader.setController(new ControllerModeSurvival(primaryStage));
 
+//        DataBaseArrangement dbArrangement = new DataBaseArrangement();
+//        dbArrangement.select();
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("startMenu.fxml"));
         loader.setController(new ControllerStartMenu(primaryStage));
@@ -67,14 +69,17 @@ public class Main extends Application {
 //Добавить кнопку стирания поля//
 
 //Выйти с уровня//
-//Свое окно на победу
-//Свое окно на проажение, с разными конструкторами для "несобранной" и "ошибок"
-//Кнопку "новая игра" в окнах победы/поражения
+//Свое окно на победу//
+//Свое окно на проажение, с разными конструкторами для "несобранной" и "ошибок"//
+//Кнопку "новая игра" в окнах победы/поражения//
 //Переделать методы из @FXML в setOnAction()//
 //Создать общий абстрактный класс для всех контроллеров (структурировать приложение)//
 //Разделить на режимы//
 
 //Начальное меню с сложностью уровня, с выбором режима, магазин(Подсказки, фон)//
+//Подключить базу данных на уровни
+//Создать табличку в базе данных для каждого уровня сложности
+//База данных для игрока
 //Класс игорока
 //Регистрация
 //Свой профиль, отдельным окном

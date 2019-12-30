@@ -16,6 +16,7 @@ public class Logic {
     private ArrayList <Integer> errorIndexColumn = new ArrayList<>();
     private int errorSize;// = 0;
     private int lives;// = 3;
+    private Player player;
 
     public void restart() {
         selectedNumber = 1;
@@ -181,33 +182,40 @@ public class Logic {
         return true;
     }
 
-    public void createArrangementNumbers() {
-        try {
-            BufferedReader reader = new BufferedReader (new FileReader("D:\\Programs\\Sudoku\\Sudoku\\src\\sample\\NewFile.txt"));
-            for (int i = 0; i < 9; i++) {
-                for (int j = 0; j < 9; j++) {
-                    arrangementNumbers[i][j] = Integer.parseInt(reader.readLine());
-                }
-            }
-            reader.close();
-        } catch (IOException e) {
-            System.out.println("Error" + e);
-        }
+    public void createArrangement(int levelOfDifficulty) {
+        DataBaseArrangement arrangement = new DataBaseArrangement();
+        arrangement.select(levelOfDifficulty);
+        arrangementNumbers = arrangement.getArrangementNumbers();
+        arrangementGaps = arrangement.getArrangementGaps();
     }
 
-    public void createArrangementGaps() {
-        try {
-            BufferedReader reader = new BufferedReader (new FileReader("D:\\Programs\\Sudoku\\Sudoku\\src\\sample\\NewFileBool.txt"));
-            for (int i = 0; i < 9; i++) {
-                for (int j = 0; j < 9; j++) {
-                    arrangementGaps[i][j] = Boolean.parseBoolean(reader.readLine());
-                }
-            }
-            reader.close();
-        } catch (IOException e) {
-            System.out.println("Error" + e);
-        }
-    }
+//    public void createArrangementNumbers() {
+//        try {
+//            BufferedReader reader = new BufferedReader (new FileReader("D:\\Programs\\Sudoku\\Sudoku\\src\\sample\\NewFile.txt"));
+//            for (int i = 0; i < 9; i++) {
+//                for (int j = 0; j < 9; j++) {
+//                    arrangementNumbers[i][j] = Integer.parseInt(reader.readLine());
+//                }
+//            }
+//            reader.close();
+//        } catch (IOException e) {
+//            System.out.println("Error" + e);
+//        }
+//    }
+//
+//    public void createArrangementGaps() {
+//        try {
+//            BufferedReader reader = new BufferedReader (new FileReader("D:\\Programs\\Sudoku\\Sudoku\\src\\sample\\NewFileBool.txt"));
+//            for (int i = 0; i < 9; i++) {
+//                for (int j = 0; j < 9; j++) {
+//                    arrangementGaps[i][j] = Boolean.parseBoolean(reader.readLine());
+//                }
+//            }
+//            reader.close();
+//        } catch (IOException e) {
+//            System.out.println("Error" + e);
+//        }
+//    }
 
     public int getSelectedNumber() {
         return selectedNumber;
@@ -217,9 +225,10 @@ public class Logic {
         this.selectedNumber = selectedNumber;
     }
 
-    public void fillingInTheField() {
-        createArrangementNumbers();
-        createArrangementGaps();
+    public void fillingInTheField(int levelOfDifficulty) {
+//        createArrangementNumbers();
+//        createArrangementGaps();
+        createArrangement(levelOfDifficulty);
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if(arrangementGaps[i][j]) {

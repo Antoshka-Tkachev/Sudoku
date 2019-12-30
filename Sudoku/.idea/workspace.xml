@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,14 +71,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/sample/ControllerModeSurvivalWithTips.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/sample/ControllerGameMode.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/sample/ControllerModeSurvivalWithTips.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectId" id="1T7TNl6mAkxTklezMEdroLb1yjL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
@@ -89,9 +93,14 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SudokuTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -100,19 +109,13 @@
       <recent name="sample" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -124,12 +127,6 @@
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
-    </configuration>
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
@@ -185,6 +182,18 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -196,11 +205,13 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1577542020511" duration="10220000" />
+      <workItem from="1577721049863" duration="3132000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1302000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -218,6 +229,44 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="526" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1577722322502">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="526" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1440.920@0.0.1440.920" timestamp="1577722322502" />
+    <state x="501" y="217" key="FileChooserDialogImpl" timestamp="1577570868253">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="501" y="217" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1577570868253" />
+    <state width="1397" height="259" key="GridCell.Tab.0.bottom" timestamp="1577724340086">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="259" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1577724340086" />
+    <state width="1397" height="259" key="GridCell.Tab.0.center" timestamp="1577724340086">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="259" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1577724340086" />
+    <state width="1397" height="259" key="GridCell.Tab.0.left" timestamp="1577724340085">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="259" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1577724340085" />
+    <state width="1397" height="259" key="GridCell.Tab.0.right" timestamp="1577724340086">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1397" height="259" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1577724340086" />
+    <state x="201" y="36" key="SettingsEditor" timestamp="1577570872978">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="201" y="36" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1577570872978" />
+    <state x="451" y="242" key="extract.method.dialog" timestamp="1577569557489">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="451" y="242" key="extract.method.dialog/0.0.1440.920@0.0.1440.920" timestamp="1577569557489" />
+    <state x="377" y="211" key="run.anything.popup" timestamp="1577576147714">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="377" y="211" key="run.anything.popup/0.0.1440.920@0.0.1440.920" timestamp="1577576147714" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Sudoku$Main.ic" NAME="Main Coverage Results" MODIFIED="1573586554867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

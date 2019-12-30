@@ -156,7 +156,7 @@ public abstract class ControllerAbstractMode {
     }
 
     private void fillingInTheField() {
-        logic.fillingInTheField();
+        logic.fillingInTheField(gameMode.getLevelOfDifficulty());
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (logic.getGameFieldElement(i,j) != 0) {
