@@ -72,6 +72,8 @@ public class ControllerModeWithTips extends ControllerAbstractMode implements In
         buttonExit.setGraphic(new ImageView((image)));
 
         setVisibleScene(true);
+
+        setAccount();
     }
 
     @Override

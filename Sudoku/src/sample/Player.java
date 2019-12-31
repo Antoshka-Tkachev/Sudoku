@@ -5,7 +5,15 @@ public class Player {
     private String password;
     private int level;
     private int experience;
-    private int help;
+
+    public Player() { }
+
+    public Player(String login, String password) {
+        this.login = login;
+        this.password = password;
+        level = 0;
+        experience = 0;
+    }
 
     public String getLogin() {
         return login;
@@ -39,11 +47,4 @@ public class Player {
         this.experience = experience;
     }
 
-    public int getHelp() {
-        return help;
-    }
-
-    public void setHelp(int help) {
-        this.help = help;
-    }
 }

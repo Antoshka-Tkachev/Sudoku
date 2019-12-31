@@ -16,10 +16,10 @@ import java.util.ResourceBundle;
 
 public class ControllerResultMenu implements Initializable {
 
-    Stage thisStage;
-    Stage firstStage;
-    GameMode gameMode;
-    Result result;
+    private Stage thisStage;
+    private Stage firstStage;
+    private GameMode gameMode;
+    private Result result;
 
     @FXML
     private Label labelInformation;

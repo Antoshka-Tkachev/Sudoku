@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -24,24 +25,24 @@
             <Font name="System Bold Italic" size="27.0" />
          </font>
       </Button>
-      <Label fx:id="labelBackground" layoutX="239.0" layoutY="223.0" prefHeight="204.0" prefWidth="309.0" style="-fx-background-color: white; -fx-background-radius: 10;" textFill="#c61414" />
-      <Label fx:id="labelTitleAccount" layoutX="308.0" layoutY="223.0" prefHeight="63.0" prefWidth="201.0" text="Личный кабинет" textFill="#060ea4">
+      <Label fx:id="labelBackgroundLogin" layoutX="239.0" layoutY="223.0" prefHeight="204.0" prefWidth="309.0" style="-fx-background-color: white; -fx-background-radius: 10;" textFill="#c61414" />
+      <Label fx:id="labelTitleLogin" layoutX="308.0" layoutY="223.0" prefHeight="63.0" prefWidth="201.0" text="Личный кабинет" textFill="#060ea4">
          <font>
             <Font name="System Bold Italic" size="21.0" />
          </font></Label>
-      <Label fx:id="labelLogin" layoutX="269.0" layoutY="281.0" text="Логин" textFill="#060ea4">
+      <Label fx:id="labelLogin" layoutX="261.0" layoutY="281.0" text="Никнейм" textFill="#060ea4">
          <font>
             <Font name="System Bold Italic" size="21.0" />
          </font></Label>
-      <Label fx:id="labelPassword" layoutX="269.0" layoutY="324.0" text="Пароль" textFill="#060ea4">
+      <Label fx:id="labelPassword" layoutX="261.0" layoutY="324.0" text="Пароль" textFill="#060ea4">
          <font>
             <Font name="System Bold Italic" size="21.0" />
          </font></Label>
-      <TextField fx:id="textLogin" layoutX="363.0" layoutY="281.0">
+      <TextField fx:id="textLogin" layoutX="370.0" layoutY="281.0" prefHeight="29.0" prefWidth="155.0">
          <font>
             <Font size="13.0" />
          </font></TextField>
-      <PasswordField fx:id="textPassword" layoutX="363.0" layoutY="324.0">
+      <PasswordField fx:id="textPassword" layoutX="370.0" layoutY="324.0" prefHeight="29.0" prefWidth="155.0">
          <font>
             <Font size="13.0" />
          </font></PasswordField>
@@ -53,5 +54,37 @@
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Button>
+      <Label fx:id="labelBackgroundAccount" layoutX="272.0" layoutY="232.0" prefHeight="168.0" prefWidth="255.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+      <ProgressBar fx:id="progressExp" layoutX="305.0" layoutY="317.0" prefHeight="20.0" prefWidth="187.0" progress="0.0" />
+      <Label fx:id="labelMinExp" layoutX="287.0" layoutY="312.0" prefHeight="29.0" prefWidth="15.0" style="-fx-background-color: white; -fx-background-radius: 5;" text=" 0" textAlignment="CENTER" textFill="#1b97df">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelMaxExp" layoutX="497.0" layoutY="313.0" prefHeight="29.0" prefWidth="28.0" style="-fx-background-color: white; -fx-background-radius: 5;" text="100" textAlignment="CENTER" textFill="#1b97df">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelNickname" layoutX="303.0" layoutY="239.0" prefHeight="43.0" prefWidth="211.0" textFill="#060ea4">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonProfile" layoutX="305.0" layoutY="352.0" mnemonicParsing="false" text="Профиль" textFill="#060ea4">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonExit" layoutX="424.0" layoutY="352.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Выйти" textFill="#060ea4">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelLevel" layoutX="305.0" layoutY="280.0" prefHeight="28.0" prefWidth="155.0" text="Уровень: " textFill="#060ea4">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

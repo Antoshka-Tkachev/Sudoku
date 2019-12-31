@@ -50,6 +50,7 @@ public class ControllerGameMode implements Initializable {
     public ControllerGameMode(Stage stage, GameMode gameMode) {
         this.stage = stage;
         this.gameMode = new GameMode(gameMode);
+        //this.gameMode = gameMode;
     }
 
     @Override

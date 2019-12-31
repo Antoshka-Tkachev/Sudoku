@@ -7,10 +7,12 @@ public class GameMode {
     private boolean withBet;
     private int bet;
     private String timeToGame;
-
-
+    private Player player;
+    private boolean signIn;
 
     public GameMode() {
+        player = new Player();
+        signIn = false;
         survival = false;
         withTips = false;
         withBet = false;
@@ -18,6 +20,8 @@ public class GameMode {
     }
 
     public GameMode(GameMode other) {
+        this.player = other.player;
+        this.signIn = other.signIn;
         this.survival = other.survival;
         this.withTips = other.withTips;
         this.withBet = other.withBet;
@@ -28,6 +32,22 @@ public class GameMode {
             this.timeToGame = other.timeToGame;
         }
 
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public boolean isSignIn() {
+        return signIn;
+    }
+
+    public void setSignIn(boolean signIn) {
+        this.signIn = signIn;
     }
 
     public boolean isSurvival() {

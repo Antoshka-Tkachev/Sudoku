@@ -83,6 +83,8 @@ public class ControllerModeSurvivalWithTips extends ControllerAbstractMode imple
         buttonExit.setGraphic(new ImageView((image)));
 
         setVisibleScene(true);
+
+        setAccount();
     }
 
     @Override

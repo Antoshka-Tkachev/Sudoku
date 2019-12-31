@@ -69,6 +69,8 @@ public class ControllerModeClassic extends ControllerAbstractMode implements Ini
         buttonExit.setGraphic(new ImageView((image)));
 
         setVisibleScene(true);
+
+        setAccount();
     }
 
     @Override
