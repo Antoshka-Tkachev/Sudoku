@@ -3,7 +3,6 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -224,7 +223,7 @@ public abstract class ControllerAbstractMode {
         result.setTimer(timer);
 
         Stage secondStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("resultMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/resultMenu.fxml"));
         loader.setController(new ControllerResultMenu(gameMode, result, secondStage, stage));
         Parent root = null;
         try {
@@ -269,7 +268,7 @@ public abstract class ControllerAbstractMode {
         if (alert.getResult() == ButtonType.YES) {
             timer.stop();
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("startMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/startMenu.fxml"));
             loader.setController(new ControllerStartMenu(stage, gameMode));
             Parent root = null;
             try {

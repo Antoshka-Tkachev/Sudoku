@@ -10,9 +10,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.*;
 import java.util.ResourceBundle;
-import java.util.Scanner;
 
 public class ControllerStartMenu implements Initializable{
     private Stage stage;
@@ -108,6 +106,7 @@ public class ControllerStartMenu implements Initializable{
         buttonSignIn.setOnAction(this::clickedSignIn);
         buttonSignUp.setOnAction(this::clickedSignUp);
         buttonExit.setOnAction(this::clickedExit);
+        buttonProfile.setOnAction(this::clickedProfile);
     }
 
     private void setVisibleAuthorization(boolean flag) {
@@ -135,27 +134,19 @@ public class ControllerStartMenu implements Initializable{
     private void clickedSignIn(ActionEvent actionEvent) {
 
         try {
-            Class.forName("org.sqlite.JDBC");
-            Connection connection = DriverManager.getConnection("jdbc:sqlite:./src/dataBase/Player.db");
-            Statement statement = connection.createStatement();
+            DataBasePlayer dataBasePlayer = new DataBasePlayer();
 
-            String query = "SELECT * FROM Player WHERE login='" + textLogin.getText() + "' AND " +
-                    "password='" + textPassword.getText() + "'";
+            gameMode.setPlayer(dataBasePlayer.select(textLogin.getText(), textPassword.getText()));
 
-            ResultSet resultSet = statement.executeQuery(query);
-            if (resultSet.next()) {
+            if (gameMode.getPlayer() != null) {
+
                 gameMode.setSignIn(true);
-                gameMode.getPlayer().setLogin(resultSet.getString("login"));
-                gameMode.getPlayer().setPassword(resultSet.getString("password"));
-                gameMode.getPlayer().setLevel(resultSet.getInt("level"));
-                gameMode.getPlayer().setExperience(resultSet.getInt("exp"));
+                setVisibleAuthorization(false);
+                setVisibleAccount(true);
 
-                labelNickname.setText(resultSet.getString("login"));
-                labelLevel.setText("Уровень: " + resultSet.getInt("level"));
-                progressExp.setProgress((Double.parseDouble(String.valueOf(resultSet.getInt("exp")))) / 100);
-
-               setVisibleAuthorization(false);
-               setVisibleAccount(true);
+                labelNickname.setText(gameMode.getPlayer().getLogin());
+                labelLevel.setText("Уровень: " + gameMode.getPlayer().getLevel());
+                progressExp.setProgress((Double.parseDouble(String.valueOf(gameMode.getPlayer().getExperience()))) / 100);
 
             } else {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -164,8 +155,6 @@ public class ControllerStartMenu implements Initializable{
                 alert.showAndWait();
             }
 
-            statement.close();
-            connection.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -175,31 +164,19 @@ public class ControllerStartMenu implements Initializable{
     private void clickedSignUp(ActionEvent actionEvent) {
 
         try{
-            Class.forName("org.sqlite.JDBC");
-            Connection connection = DriverManager.getConnection("jdbc:sqlite:./src/dataBase/Player.db");
-            Statement statement = connection.createStatement();
 
-            String query = "SELECT * FROM Player WHERE login='" + textLogin.getText() + "'";
+            DataBasePlayer dataBasePlayer = new DataBasePlayer();
 
-            ResultSet resultSet = statement.executeQuery(query);
-
-            if (resultSet.next()) {
+            if (dataBasePlayer.select(textLogin.getText())) {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Ошибка");
                 alert.setHeaderText("Данный никнейм занят");
                 alert.showAndWait();
             } else {
-                gameMode.setPlayer(new Player(textLogin.getText(), textPassword.getText()));
                 gameMode.setSignIn(true);
+                gameMode.setPlayer(new Player(textLogin.getText(), textPassword.getText()));
 
-                query = "INSERT INTO Player (login, password, level, exp) " +
-                                "VALUES ('" +
-                                gameMode.getPlayer().getLogin() + "', '" +
-                                gameMode.getPlayer().getPassword() + "', '" +
-                                gameMode.getPlayer().getLevel() + "', '" +
-                                gameMode.getPlayer().getExperience() + "')";
-
-                statement.executeUpdate(query);
+                dataBasePlayer.insert(textLogin.getText(), textPassword.getText(), 0, 0, 0,0);
 
                 setVisibleAuthorization(false);
                 setVisibleAccount(true);
@@ -209,8 +186,6 @@ public class ControllerStartMenu implements Initializable{
 
             }
 
-            statement.close();
-            connection.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -232,18 +207,18 @@ public class ControllerStartMenu implements Initializable{
         FXMLLoader loader;
         if (gameMode.isSurvival()) {
             if (gameMode.isWithTips()) {
-                loader = new FXMLLoader(getClass().getResource("modeSurvivalWithTips.fxml"));
+                loader = new FXMLLoader(getClass().getResource("../fxml/modeSurvivalWithTips.fxml"));
                 loader.setController(new ControllerModeSurvivalWithTips(stage, gameMode));
             } else {
-                loader = new FXMLLoader(getClass().getResource("modeSurvival.fxml"));
+                loader = new FXMLLoader(getClass().getResource("../fxml/modeSurvival.fxml"));
                 loader.setController(new ControllerModeSurvival(stage, gameMode));
             }
         } else {
             if (gameMode.isWithTips()) {
-                loader = new FXMLLoader(getClass().getResource("modeWithTips.fxml"));
+                loader = new FXMLLoader(getClass().getResource("../fxml/modeWithTips.fxml"));
                 loader.setController(new ControllerModeWithTips(stage, gameMode));
             } else {
-                loader = new FXMLLoader(getClass().getResource("modeClassic.fxml"));
+                loader = new FXMLLoader(getClass().getResource("../fxml/modeClassic.fxml"));
                 loader.setController(new ControllerModeClassic(stage, gameMode));
             }
         }
@@ -260,9 +235,22 @@ public class ControllerStartMenu implements Initializable{
     }
 
     private void clickedGameMode(ActionEvent actionEvent) {
-        System.out.println(gameMode.getPlayer().getLogin());
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("gameMode.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/gameMode.fxml"));
         loader.setController(new ControllerGameMode(stage, gameMode));
+        Parent root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        assert root != null;
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
+
+    private void clickedProfile(ActionEvent actionEvent) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/profile.fxml"));
+        loader.setController(new ControllerProfile(stage, gameMode));
         Parent root = null;
         try {
             root = loader.load();

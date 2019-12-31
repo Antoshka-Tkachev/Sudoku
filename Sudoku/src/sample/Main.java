@@ -30,7 +30,7 @@ public class Main extends Application {
 //        DataBaseArrangement dbArrangement = new DataBaseArrangement();
 //        dbArrangement.select();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("startMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/startMenu.fxml"));
         loader.setController(new ControllerStartMenu(primaryStage));
         Parent root = loader.load();
         primaryStage.setScene(new Scene(root));

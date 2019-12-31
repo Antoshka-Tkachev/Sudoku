@@ -190,7 +190,7 @@ public class ControllerModeClassic extends ControllerAbstractMode implements Ini
         if (alert.getResult() == ButtonType.YES) {
             timer.stop();
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("modeClassic.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/modeClassic.fxml"));
             loader.setController(new ControllerModeClassic(stage, gameMode, logic));
             Parent root = null;
             try {

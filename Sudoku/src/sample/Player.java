@@ -5,6 +5,8 @@ public class Player {
     private String password;
     private int level;
     private int experience;
+    private int countWin;
+    private int countLose;
 
     public Player() { }
 
@@ -13,6 +15,8 @@ public class Player {
         this.password = password;
         level = 0;
         experience = 0;
+        countWin = 0;
+        countLose = 0;
     }
 
     public String getLogin() {
@@ -47,4 +51,19 @@ public class Player {
         this.experience = experience;
     }
 
+    public int getCountWin() {
+        return countWin;
+    }
+
+    public void setCountWin(int countWin) {
+        this.countWin = countWin;
+    }
+
+    public int getCountLose() {
+        return countLose;
+    }
+
+    public void setCountLose(int countLose) {
+        this.countLose = countLose;
+    }
 }

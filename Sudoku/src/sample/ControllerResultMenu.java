@@ -66,7 +66,7 @@ public class ControllerResultMenu implements Initializable {
     private void clickedExit(ActionEvent actionEvent) {
         thisStage.close();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("startMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/startMenu.fxml"));
         loader.setController(new ControllerStartMenu(firstStage, gameMode));
         Parent root = null;
         try {
@@ -85,18 +85,18 @@ public class ControllerResultMenu implements Initializable {
         FXMLLoader loader;
         if (gameMode.isSurvival()) {
             if (gameMode.isWithTips()) {
-                loader = new FXMLLoader(getClass().getResource("modeSurvivalWithTips.fxml"));
+                loader = new FXMLLoader(getClass().getResource("../fxml/modeSurvivalWithTips.fxml"));
                 loader.setController(new ControllerModeSurvivalWithTips(firstStage, gameMode));
             } else {
-                loader = new FXMLLoader(getClass().getResource("modeSurvival.fxml"));
+                loader = new FXMLLoader(getClass().getResource("../fxml/modeSurvival.fxml"));
                 loader.setController(new ControllerModeSurvival(firstStage, gameMode));
             }
         } else {
             if (gameMode.isWithTips()) {
-                loader = new FXMLLoader(getClass().getResource("modeWithTips.fxml"));
+                loader = new FXMLLoader(getClass().getResource("../fxml/modeWithTips.fxml"));
                 loader.setController(new ControllerModeWithTips(firstStage, gameMode));
             } else {
-                loader = new FXMLLoader(getClass().getResource("modeClassic.fxml"));
+                loader = new FXMLLoader(getClass().getResource("../fxml/modeClassic.fxml"));
                 loader.setController(new ControllerModeClassic(firstStage, gameMode));
             }
         }

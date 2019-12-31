@@ -67,7 +67,7 @@ public class ControllerGameMode implements Initializable {
     }
 
     private void clickedApply(ActionEvent actionEvent) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("startMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/startMenu.fxml"));
         loader.setController(new ControllerStartMenu(stage, gameMode));
         Parent root = null;
         try {

@@ -216,7 +216,7 @@ public class ControllerModeWithTips extends ControllerAbstractMode implements In
         if (alert.getResult() == ButtonType.YES) {
             timer.stop();
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("modeWithTips.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/modeWithTips.fxml"));
             loader.setController(new ControllerModeWithTips(stage, gameMode, logic));
             Parent root = null;
             try {

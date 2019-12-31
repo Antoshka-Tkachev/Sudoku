@@ -238,7 +238,7 @@ public class ControllerModeSurvivalWithTips extends ControllerAbstractMode imple
         if (alert.getResult() == ButtonType.YES) {
             timer.stop();
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("modeSurvivalWithTips.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/modeSurvivalWithTips.fxml"));
             loader.setController(new ControllerModeSurvivalWithTips(stage, gameMode, logic));
             Parent root = null;
             try {

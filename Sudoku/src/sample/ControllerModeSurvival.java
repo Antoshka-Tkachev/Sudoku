@@ -209,7 +209,7 @@ public class ControllerModeSurvival extends ControllerAbstractMode implements In
         if (alert.getResult() == ButtonType.YES) {
             timer.stop();
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("modeSurvival.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/modeSurvival.fxml"));
             loader.setController(new ControllerModeSurvival(stage, gameMode, logic));
             Parent root = null;
             try {
