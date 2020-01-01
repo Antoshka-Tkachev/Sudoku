@@ -221,6 +221,7 @@ public abstract class ControllerAbstractMode {
         buttonExit.setDisable(false);
 
         result.setTimer(timer);
+        result.setCountLives(logic.getLives());
 
         Stage secondStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/resultMenu.fxml"));

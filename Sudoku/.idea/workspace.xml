@@ -213,6 +213,7 @@
       <workItem from="1577751953023" duration="150000" />
       <workItem from="1577783839513" duration="6615000" />
       <workItem from="1577792658706" duration="6973000" />
+      <workItem from="1577865698942" duration="21468000" />
     </task>
     <servers />
   </component>
@@ -237,46 +238,46 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="526" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1577796495391">
+    <state x="526" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1577905767845">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="526" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1440.920@0.0.1440.920" timestamp="1577796495391" />
+    <state x="526" y="163" key="#com.intellij.ide.util.MemberChooser/0.0.1440.920@0.0.1440.920" timestamp="1577905767845" />
     <state x="501" y="217" key="FileChooserDialogImpl" timestamp="1577570868253">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="501" y="217" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1577570868253" />
-    <state width="1397" height="117" key="GridCell.Tab.0.bottom" timestamp="1577800863087">
+    <state width="1397" height="117" key="GridCell.Tab.0.bottom" timestamp="1577918308855">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="117" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1577800863087" />
-    <state width="1397" height="117" key="GridCell.Tab.0.center" timestamp="1577800863086">
+    <state width="1397" height="117" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1577918308855" />
+    <state width="1397" height="117" key="GridCell.Tab.0.center" timestamp="1577918308855">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="117" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1577800863086" />
-    <state width="1397" height="117" key="GridCell.Tab.0.left" timestamp="1577800863086">
+    <state width="1397" height="117" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1577918308855" />
+    <state width="1397" height="117" key="GridCell.Tab.0.left" timestamp="1577918308854">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="117" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1577800863086" />
-    <state width="1397" height="117" key="GridCell.Tab.0.right" timestamp="1577800863086">
+    <state width="1397" height="117" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1577918308854" />
+    <state width="1397" height="117" key="GridCell.Tab.0.right" timestamp="1577918308855">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="117" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1577800863086" />
-    <state width="1397" height="300" key="GridCell.Tab.1.bottom" timestamp="1577751887661">
+    <state width="1397" height="117" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1577918308855" />
+    <state width="1397" height="300" key="GridCell.Tab.1.bottom" timestamp="1577911900661">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="300" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1577751887661" />
-    <state width="1397" height="300" key="GridCell.Tab.1.center" timestamp="1577751887660">
+    <state width="1397" height="300" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1577911900661" />
+    <state width="1397" height="300" key="GridCell.Tab.1.center" timestamp="1577911900661">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="300" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1577751887660" />
-    <state width="1397" height="300" key="GridCell.Tab.1.left" timestamp="1577751887660">
+    <state width="1397" height="300" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1577911900661" />
+    <state width="1397" height="300" key="GridCell.Tab.1.left" timestamp="1577911900661">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="300" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1577751887660" />
-    <state width="1397" height="300" key="GridCell.Tab.1.right" timestamp="1577751887660">
+    <state width="1397" height="300" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1577911900661" />
+    <state width="1397" height="300" key="GridCell.Tab.1.right" timestamp="1577911900661">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1397" height="300" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1577751887660" />
+    <state width="1397" height="300" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1577911900661" />
     <state x="201" y="36" key="SettingsEditor" timestamp="1577570872978">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -289,6 +290,10 @@
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="377" y="211" key="run.anything.popup/0.0.1440.920@0.0.1440.920" timestamp="1577576147714" />
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1577916205262">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1577916205262" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Sudoku$Main.ic" NAME="Main Coverage Results" MODIFIED="1573586554867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

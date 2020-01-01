@@ -6,7 +6,7 @@ public class DataBasePlayer {
 
     private Player player;
 
-    public boolean select(String login) throws Exception{
+    public boolean select(String login) throws Exception {
         Class.forName("org.sqlite.JDBC");
         Connection connection = DriverManager.getConnection("jdbc:sqlite:./src/dataBase/Player.db");
         Statement statement = connection.createStatement();
@@ -68,4 +68,23 @@ public class DataBasePlayer {
         connection.close();
 
     }
+
+    public void update(String login, int level, int exp, int countWin, int countLose) throws Exception {
+
+        String query = "UPDATE Player SET level = " + level +
+                ", exp = " + exp +
+                ", countWin = " + countWin +
+                ", countLose = " + countLose +
+                " WHERE login = '" + login + "';";
+
+        Class.forName("org.sqlite.JDBC");
+        Connection connection = DriverManager.getConnection("jdbc:sqlite:./src/dataBase/Player.db");
+        Statement statement = connection.createStatement();
+        statement.executeUpdate(query);
+
+        statement.close();
+        connection.close();
+
+    }
+
 }

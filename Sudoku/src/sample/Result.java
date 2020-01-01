@@ -7,6 +7,11 @@ public class Result {
     private int countHelp;
     private GameTimer timer;
 
+    public Result() {
+        this.countLives = 3;
+        this.countHelp = 0;
+    }
+
     public void setTimer(GameTimer timer) {
         this.timer = timer;
     }

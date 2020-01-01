@@ -16,7 +16,6 @@ public class Logic {
     private ArrayList <Integer> errorIndexColumn = new ArrayList<>();
     private int errorSize;// = 0;
     private int lives;// = 3;
-    private Player player;
 
     public void restart() {
         selectedNumber = 1;
@@ -114,8 +113,6 @@ public class Logic {
 
         }
         lives--;
-
-        System.out.println(errorIndexColumn.size());
     }
 
     public boolean correctionError(int indexRow, int indexColumn) {
@@ -125,11 +122,9 @@ public class Logic {
                 errorIndexRow.remove(i);
                 errorIndexColumn.remove(i);
                 errorSize--;
-                System.out.println(errorIndexColumn.size());
                 return true;
             }
         }
-        System.out.println(errorIndexColumn.size());
         return false;
     }
 
@@ -189,34 +184,6 @@ public class Logic {
         arrangementGaps = arrangement.getArrangementGaps();
     }
 
-//    public void createArrangementNumbers() {
-//        try {
-//            BufferedReader reader = new BufferedReader (new FileReader("D:\\Programs\\Sudoku\\Sudoku\\src\\sample\\NewFile.txt"));
-//            for (int i = 0; i < 9; i++) {
-//                for (int j = 0; j < 9; j++) {
-//                    arrangementNumbers[i][j] = Integer.parseInt(reader.readLine());
-//                }
-//            }
-//            reader.close();
-//        } catch (IOException e) {
-//            System.out.println("Error" + e);
-//        }
-//    }
-//
-//    public void createArrangementGaps() {
-//        try {
-//            BufferedReader reader = new BufferedReader (new FileReader("D:\\Programs\\Sudoku\\Sudoku\\src\\sample\\NewFileBool.txt"));
-//            for (int i = 0; i < 9; i++) {
-//                for (int j = 0; j < 9; j++) {
-//                    arrangementGaps[i][j] = Boolean.parseBoolean(reader.readLine());
-//                }
-//            }
-//            reader.close();
-//        } catch (IOException e) {
-//            System.out.println("Error" + e);
-//        }
-//    }
-
     public int getSelectedNumber() {
         return selectedNumber;
     }
@@ -226,8 +193,7 @@ public class Logic {
     }
 
     public void fillingInTheField(int levelOfDifficulty) {
-//        createArrangementNumbers();
-//        createArrangementGaps();
+
         createArrangement(levelOfDifficulty);
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {

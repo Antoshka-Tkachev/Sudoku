@@ -53,7 +53,7 @@ public class DataBaseArrangement {
             connection.close();
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.exit(1);
         }
 
         int k = 0;

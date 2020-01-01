@@ -114,4 +114,12 @@ public class GameTimer {
         timerMin = 0;
         timerHour = 0;
     }
+
+    public int getTimerMin() {
+        return timerMin;
+    }
+
+    public int getTimerHour() {
+        return timerHour;
+    }
 }

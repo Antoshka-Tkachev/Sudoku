@@ -28,10 +28,12 @@ public class ControllerModeSurvivalWithTips extends ControllerAbstractMode imple
 
     public ControllerModeSurvivalWithTips(Stage stage, GameMode gameMode) {
         super(stage, gameMode);
+        result.setCountLives(3);
     }
 
     public ControllerModeSurvivalWithTips(Stage stage, GameMode gameMode, Logic logic) {
         super(stage, gameMode, logic);
+        result.setCountLives(3);
     }
 
     @Override
@@ -124,6 +126,7 @@ public class ControllerModeSurvivalWithTips extends ControllerAbstractMode imple
     @Override
     protected void clickedHelp(ActionEvent actionEvent) {
         labelWarning.setText("");
+        result.setCountHelp(result.getCountHelp() + 1);
 
         backgroundUpdateHelp();
 
@@ -213,7 +216,6 @@ public class ControllerModeSurvivalWithTips extends ControllerAbstractMode imple
         bufferButtonGameField.setText("");
         bufferButtonGameField.setStyle(null);
 
-        System.out.println("doClick");
     }
 
     @Override
@@ -292,7 +294,6 @@ public class ControllerModeSurvivalWithTips extends ControllerAbstractMode imple
         }
 
         gameOver();
-        System.out.println("doClick");
     }
 
     @Override

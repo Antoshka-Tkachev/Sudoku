@@ -20,10 +20,12 @@ public class ControllerModeClassic extends ControllerAbstractMode implements Ini
 
     public ControllerModeClassic(Stage stage, GameMode gameMode) {
         super(stage, gameMode);
+        result.setCountLives(0);
     }
 
     public ControllerModeClassic(Stage stage, GameMode gameMode, Logic logic) {
         super(stage, gameMode, logic);
+        result.setCountLives(0);
     }
 
     @Override
@@ -100,6 +102,8 @@ public class ControllerModeClassic extends ControllerAbstractMode implements Ini
     protected void clickedHelp(ActionEvent actionEvent) {
         labelWarning.setText("");
 
+        result.setCountHelp(result.getCountHelp() + 1);
+
         backgroundUpdateHelp();
 
         int result = logic.clickedButtonHelp();
@@ -171,7 +175,6 @@ public class ControllerModeClassic extends ControllerAbstractMode implements Ini
         bufferButtonGameField.setText("");
         bufferButtonGameField.setStyle(null);
 
-        System.out.println("doClick");
     }
 
     @Override
@@ -226,7 +229,6 @@ public class ControllerModeClassic extends ControllerAbstractMode implements Ini
         bufferButtonGameField.setText(String.valueOf(logic.getSelectedNumber()));
         bufferButtonGameField.setStyle("-fx-text-fill: #4608ba; -fx-font-weight:bold; -fx-font-size: 24; -fx-font-family: \"System\" "); //для подсказок//
         gameOver();
-        System.out.println("doClick");
     }
 
 }

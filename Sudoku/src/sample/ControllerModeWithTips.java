@@ -20,10 +20,12 @@ public class ControllerModeWithTips extends ControllerAbstractMode implements In
 
     public ControllerModeWithTips(Stage stage, GameMode gameMode) {
         super(stage, gameMode);
+        result.setCountLives(0);
     }
 
     public ControllerModeWithTips(Stage stage, GameMode gameMode, Logic logic) {
         super(stage, gameMode, logic);
+        result.setCountLives(0);
     }
 
     @Override
@@ -106,6 +108,7 @@ public class ControllerModeWithTips extends ControllerAbstractMode implements In
     @Override
     protected void clickedHelp(ActionEvent actionEvent) {
         labelWarning.setText("");
+        result.setCountHelp(result.getCountHelp() + 1);
 
         backgroundUpdateHelp();
 
@@ -191,7 +194,6 @@ public class ControllerModeWithTips extends ControllerAbstractMode implements In
         bufferButtonGameField.setText("");
         bufferButtonGameField.setStyle(null);
 
-        System.out.println("doClick");
     }
 
     @Override
@@ -267,7 +269,6 @@ public class ControllerModeWithTips extends ControllerAbstractMode implements In
         }
 
         gameOver();
-        System.out.println("doClick");
     }
 
     @Override

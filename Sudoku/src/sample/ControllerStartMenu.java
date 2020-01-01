@@ -83,8 +83,7 @@ public class ControllerStartMenu implements Initializable{
 
     public ControllerStartMenu (Stage stage, GameMode gameMode)  {
         this.stage = stage;
-        this.gameMode = new GameMode(gameMode);
-
+        this.gameMode = gameMode;
     }
 
     @Override
@@ -156,14 +155,14 @@ public class ControllerStartMenu implements Initializable{
             }
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.exit(1);
         }
 
     }
 
     private void clickedSignUp(ActionEvent actionEvent) {
 
-        try{
+        try {
 
             DataBasePlayer dataBasePlayer = new DataBasePlayer();
 
@@ -187,7 +186,7 @@ public class ControllerStartMenu implements Initializable{
             }
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.exit(1);
         }
 
     }

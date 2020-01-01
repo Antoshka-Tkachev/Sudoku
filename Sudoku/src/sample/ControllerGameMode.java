@@ -20,19 +20,7 @@ public class ControllerGameMode implements Initializable {
     private ObservableList<String> levelOfDifficulty;
 
     @FXML
-    private TextField textBet;
-
-    @FXML
-    private TextField textTimeToGame;
-
-    @FXML
-    private Button buttonMakeABet;
-
-    @FXML
-    private CheckBox checkWithBet;
-
-    @FXML
-    private Button buttonHelp;
+    private Button buttonRules;
 
     @FXML
     private ToggleButton buttonSurvival;
@@ -49,8 +37,7 @@ public class ControllerGameMode implements Initializable {
 
     public ControllerGameMode(Stage stage, GameMode gameMode) {
         this.stage = stage;
-        this.gameMode = new GameMode(gameMode);
-        //this.gameMode = gameMode;
+        this.gameMode = gameMode;
     }
 
     @Override
@@ -62,6 +49,7 @@ public class ControllerGameMode implements Initializable {
         comboLevelOfDifficulty.getItems().add("Любитель");
         comboLevelOfDifficulty.getItems().add("Профи");
         comboLevelOfDifficulty.setOnAction(this::clickedLevelOfDifficulty);
+        comboLevelOfDifficulty.setStyle("-fx-font-size:18; -fx-font-family:System; -fx-font-weight: Bold");
 
         startGUI();
     }

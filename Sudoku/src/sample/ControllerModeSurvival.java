@@ -28,10 +28,12 @@ public class ControllerModeSurvival extends ControllerAbstractMode implements In
 
     public ControllerModeSurvival(Stage stage, GameMode gameMode) {
         super(stage, gameMode);
+        result.setCountLives(3);
     }
 
     public ControllerModeSurvival(Stage stage, GameMode gameMode, Logic logic) {
         super(stage, gameMode, logic);
+        result.setCountLives(3);
     }
 
     @Override
@@ -115,6 +117,7 @@ public class ControllerModeSurvival extends ControllerAbstractMode implements In
     @Override
     protected void clickedHelp(ActionEvent actionEvent) {
         labelWarning.setText("");
+        result.setCountHelp(result.getCountHelp() + 1);
 
         backgroundUpdateHelp();
 
@@ -190,7 +193,6 @@ public class ControllerModeSurvival extends ControllerAbstractMode implements In
         bufferButtonGameField.setText("");
         bufferButtonGameField.setStyle(null);
 
-        System.out.println("doClick");
     }
 
     @Override
@@ -255,7 +257,6 @@ public class ControllerModeSurvival extends ControllerAbstractMode implements In
         }
 
         gameOver();
-        System.out.println("doClick");
     }
 
     @Override
