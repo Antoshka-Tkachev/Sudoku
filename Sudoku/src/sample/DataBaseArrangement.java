@@ -33,13 +33,13 @@ public class DataBaseArrangement {
 
             switch (levelOfDifficulty) {
                 case 1:
-                    query = "SELECT ArrangementNumbers, ArrangementGaps FROM ArrangementEasy WHERE id=" + (random.nextInt(2) + 1);
+                    query = "SELECT ArrangementNumbers, ArrangementGaps FROM ArrangementEasy WHERE id=" + (random.nextInt(5) + 1);
                     break;
                 case 2:
-                    query = "SELECT ArrangementNumbers, ArrangementGaps FROM ArrangementMiddle WHERE id=" + (random.nextInt(2) + 1);
+                    query = "SELECT ArrangementNumbers, ArrangementGaps FROM ArrangementMiddle WHERE id=" + (random.nextInt(5) + 1);
                     break;
                 case 3:
-                    query = "SELECT ArrangementNumbers, ArrangementGaps FROM ArrangementHard WHERE id=" + (random.nextInt(2) + 1);
+                    query = "SELECT ArrangementNumbers, ArrangementGaps FROM ArrangementHard WHERE id=" + (random.nextInt(10) + 1);
                     break;
                 default:
                     break;
