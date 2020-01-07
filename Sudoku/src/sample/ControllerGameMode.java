@@ -42,6 +42,7 @@ public class ControllerGameMode implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        buttonRules.setVisible(false);
         buttonApply.setOnAction(this::clickedApply);
         buttonSurvival.setOnAction(this::clickedSurvival);
         buttonWithTips.setOnAction(this::clickedWithTips);

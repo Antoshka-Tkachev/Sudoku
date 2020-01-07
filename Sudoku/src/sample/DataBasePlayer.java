@@ -24,7 +24,7 @@ public class DataBasePlayer {
         return false;
     }
 
-    public Player select(String login, String password) throws Exception {
+    public Player select(String login, int password) throws Exception {
         Class.forName("org.sqlite.JDBC");
         Connection connection = DriverManager.getConnection("jdbc:sqlite:./src/dataBase/Player.db");
         Statement statement = connection.createStatement();
@@ -35,7 +35,7 @@ public class DataBasePlayer {
         if (resultSet.next()) {
             player = new Player();
             player.setLogin(resultSet.getString("login"));
-            player.setPassword(resultSet.getString("password"));
+            player.setPassword(resultSet.getInt("password"));
             player.setLevel(resultSet.getInt("level"));
             player.setExperience(resultSet.getInt("exp"));
             player.setCountWin(resultSet.getInt("countWin"));
@@ -48,7 +48,7 @@ public class DataBasePlayer {
         return player;
     }
 
-    public void insert(String login, String password, int level, int exp, int countWin, int countLose) throws Exception {
+    public void insert(String login, int password, int level, int exp, int countWin, int countLose) throws Exception {
 
         String query = "INSERT INTO Player (login, password, level, exp, countWin, countLose) " +
                 "VALUES ('" +

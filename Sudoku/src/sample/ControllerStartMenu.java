@@ -135,7 +135,7 @@ public class ControllerStartMenu implements Initializable{
         try {
             DataBasePlayer dataBasePlayer = new DataBasePlayer();
 
-            gameMode.setPlayer(dataBasePlayer.select(textLogin.getText(), textPassword.getText()));
+            gameMode.setPlayer(dataBasePlayer.select(textLogin.getText(), textPassword.getText().hashCode()));
 
             if (gameMode.getPlayer() != null) {
 
@@ -173,9 +173,9 @@ public class ControllerStartMenu implements Initializable{
                 alert.showAndWait();
             } else {
                 gameMode.setSignIn(true);
-                gameMode.setPlayer(new Player(textLogin.getText(), textPassword.getText()));
+                gameMode.setPlayer(new Player(textLogin.getText(), textPassword.getText().hashCode()));
 
-                dataBasePlayer.insert(textLogin.getText(), textPassword.getText(), 0, 0, 0,0);
+                dataBasePlayer.insert(textLogin.getText(), textPassword.getText().hashCode(), 0, 0, 0,0);
 
                 setVisibleAuthorization(false);
                 setVisibleAccount(true);

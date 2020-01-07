@@ -11,6 +11,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.stage.Stage;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,6 +24,7 @@ public class ControllerResultMenu implements Initializable {
     private Stage firstStage;
     private GameMode gameMode;
     private Result result;
+    private Clip clip;
 
     @FXML
     private Label labelTitle;
@@ -63,6 +67,24 @@ public class ControllerResultMenu implements Initializable {
         this.firstStage = firstStage;
         this.gameMode = gameMode;
         this.result = result;
+        try {
+            if (result.isWin()) {
+                URL defaultSound = getClass().getResource("/resources/music/win.wav");
+                AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(defaultSound);
+                clip = AudioSystem.getClip();
+                clip.open(audioInputStream);
+                clip.start();
+            } else {
+                URL defaultSound = getClass().getResource("/resources/music/lose.wav");
+                AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(defaultSound);
+                clip = AudioSystem.getClip();
+                clip.open(audioInputStream);
+                clip.start();
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
     }
 
 
@@ -358,6 +380,7 @@ public class ControllerResultMenu implements Initializable {
     }
 
     private void clickedExit(ActionEvent actionEvent) {
+        clip.stop();
         thisStage.close();
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/startMenu.fxml"));
@@ -374,6 +397,7 @@ public class ControllerResultMenu implements Initializable {
     }
 
     private void clickedNewGame(ActionEvent actionEvent) {
+        clip.stop();
         thisStage.close();
 
         FXMLLoader loader;

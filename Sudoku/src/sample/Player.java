@@ -2,7 +2,7 @@ package sample;
 
 public class Player {
     private String login;
-    private String password;
+    private int password;
     private int level;
     private int experience;
     private int countWin;
@@ -10,7 +10,7 @@ public class Player {
 
     public Player() { }
 
-    public Player(String login, String password) {
+    public Player(String login, int password) {
         this.login = login;
         this.password = password;
         level = 0;
@@ -27,11 +27,11 @@ public class Player {
         this.login = login;
     }
 
-    public String getPassword() {
+    public int getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(int password) {
         this.password = password;
     }
 

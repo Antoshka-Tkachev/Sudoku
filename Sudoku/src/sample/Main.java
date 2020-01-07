@@ -15,6 +15,7 @@ public class Main extends Application {
             loader.setController(new ControllerStartMenu(primaryStage));
             Parent root = loader.load();
             primaryStage.setScene(new Scene(root));
+            primaryStage.setResizable(false);
             primaryStage.show();
         } catch (Exception e) {
             System.exit(1);

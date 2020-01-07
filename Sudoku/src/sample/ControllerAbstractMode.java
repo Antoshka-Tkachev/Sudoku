@@ -224,6 +224,7 @@ public abstract class ControllerAbstractMode {
         result.setCountLives(logic.getLives());
 
         Stage secondStage = new Stage();
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/resultMenu.fxml"));
         loader.setController(new ControllerResultMenu(gameMode, result, secondStage, stage));
         Parent root = null;
@@ -234,6 +235,7 @@ public abstract class ControllerAbstractMode {
         }
         assert root != null;
         secondStage.setScene(new Scene(root));
+        secondStage.setResizable(false);
         secondStage.show();
     }
 
